@@ -114,6 +114,12 @@
     <Compile Include="FrmCadastro.Designer.cs">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,10 +174,14 @@
     <Compile Include="FrmRelatorios.Designer.cs">
       <DependentUpon>FrmRelatorios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PedidoItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCadastro.resx">
       <DependentUpon>FrmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDelivery.resx">
       <DependentUpon>FrmDelivery.cs</DependentUpon>

@@ -35,6 +35,16 @@ namespace ProjetoFarmacia
 
         private void btnFinalizarCadastro_Click(object sender, EventArgs e)
         {
+            // Validação dos campos obrigatórios
+            if (string.IsNullOrWhiteSpace(txtNome.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(mskCpf.Text) ||
+                string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                MessageBox.Show("Erro ao cadastrar");
+                return;
+            }
+
             try
             {
                 using (var conn = Database.GetConnection())
@@ -48,7 +58,13 @@ namespace ProjetoFarmacia
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                         cmd.Parameters.AddWithValue("@cpf", mskCpf.Text);
                         cmd.Parameters.AddWithValue("@senha", txtSenha.Text);
-                        cmd.ExecuteNonQuery();
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result == 0)
+                        {
+                            MessageBox.Show("Erro ao cadastrar");
+                            return;
+                        }
                     }
                 }
 

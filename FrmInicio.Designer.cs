@@ -40,6 +40,7 @@ namespace ProjetoFarmacia
             this.btnDelivery = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnDevolucao = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,11 +171,27 @@ namespace ProjetoFarmacia
             this.btnDevolucao.UseVisualStyleBackColor = true;
             this.btnDevolucao.Click += new System.EventHandler(this.btnDevolucao_Click);
             // 
+            // btnClientes
+            // 
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClientes.Location = new System.Drawing.Point(12, 393);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(122, 34);
+            this.btnClientes.TabIndex = 4;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnDevolucao);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnDelivery);
@@ -204,5 +221,6 @@ namespace ProjetoFarmacia
         private System.Windows.Forms.Button btnDelivery;
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnDevolucao;
+        private System.Windows.Forms.Button btnClientes;
     }
 }

@@ -13,7 +13,7 @@ namespace ProjetoFarmacia
 {
     public partial class FrmInicio : Form
     {
-        Thread ntSair, ntProdutos, ntestoque, ntpedidos, ntdelivery, ntrelatorios, ntdevolucao;
+        Thread ntSair, ntClientes, ntProdutos, ntestoque, ntpedidos, ntdelivery, ntrelatorios, ntdevolucao;
         public FrmInicio()
         {
             InitializeComponent();
@@ -78,6 +78,19 @@ namespace ProjetoFarmacia
             ntdevolucao = new Thread(NovoFrmDevolucao);
             ntdevolucao.SetApartmentState (ApartmentState.STA) ;
             ntdevolucao.Start();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ntClientes = new Thread(NovoFrmClientes);
+            ntClientes.SetApartmentState(ApartmentState.STA);
+            ntClientes.Start();
+        }
+
+        private void NovoFrmClientes()
+        {
+            Application.Run(new FrmClientes());
         }
 
         private void NovoFrmDevolucao()

@@ -32,7 +32,9 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,16 +80,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "FarmaGest";
             // 
+            // dataGridViewProdutos
+            // 
+            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(12, 108);
+            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(683, 150);
+            this.dataGridViewProdutos.TabIndex = 3;
+            // 
             // FrmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewProdutos);
             this.Controls.Add(this.panel1);
             this.Name = "FrmEstoque";
             this.Text = "FrmEstoque";
+            this.Load += new System.EventHandler(this.FrmEstoque_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,5 +111,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewProdutos;
     }
 }
